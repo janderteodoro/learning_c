@@ -1,5 +1,6 @@
 #include <stdio.h>
-
+#include <stdlib.h>
+#include <locale.h>
 
 
 int main () {
@@ -24,13 +25,27 @@ int main () {
         case '1':
 
             system("cls");
-            printf("CALCULAR TENSAO");
+            printf("CALCULAR TENSAO\n");
+            printf("\n");
+            printf("Insira o valor da Corrente (A): ");
+            scanf("%f", &a);
+            printf("Insira o valor da Resistencia (R): ");
+            scanf("%f", &b);
+            res = a * b; 
+            printf("Tensao: %fV", res);
             break;
 
         case '2':
 
             system("cls");
-            printf("CALCULAR CORRENTE");
+            printf("CALCULAR CORRENTE\n");
+            printf("\n");
+            printf("Insira o valor de Tensão (V): ");
+            scanf("%f", &a);
+            printf("Insira o valor da Resistencia (R): ");
+            scanf("%f", &b);
+            res = a / b; 
+            printf("Corrente: %fA", res);
             break;
 
         case '3':
@@ -45,8 +60,8 @@ int main () {
             res = a / b; 
             printf("Resistencia: %f", res);
 
-
             break;
+
 
         default: 
             system("cls");
